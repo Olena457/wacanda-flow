@@ -30,6 +30,7 @@
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #202634;
   }
   h1,
   h2,
@@ -48,5 +49,103 @@
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
+  }
+}
+
+@layer {
+  .title {
+    color: var(--color-title-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  /* neon button _________ */
+  .neon-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    /* color: var(--color-text-white); */
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    overflow: hidden;
+    text-shadow: 0 0 5px var(--color-neon-green),
+      0 0 10px var(--color-neon-green), 0 0 15px var(--color-neon-green);
+  }
+
+  .neon-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-top-color: var(--color-neon-green);
+    border-right-color: var(--color-neon-green);
+    transform: skewX(-15deg) skewY(15deg) translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    z-index: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  .neon-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-bottom-color: var(--color-neon-green);
+    border-left-color: var(--color-neon-green);
+    transform: skewX(-15deg) skewY(15deg) translate(50%, 50%);
+    width: 150%;
+    height: 150%;
+    z-index: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  .neon-button:hover {
+    color: var(--color-neon-green);
+  }
+  /* sub text_________ */
+  .subtext {
+    position: absolute;
+    bottom: -80dvh;
+    left: 50%;
+    width: 100%;
+    max-width: 24rem;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-subtext {
+      max-width: 34rem;
+    }
+  }
+  .hero-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 20;
+    height: 60vh;
+    width: 24rem;
+    transform-origin: center;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .hero-image {
+      width: 30vw;
+    }
+  }
+  /* animated title */
+  .animated-title {
+    font-family: inherit;
+    font-weight: 900;
+    opacity: 0;
+    transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+    transform-origin: 50% 50% -150px !important;
+    will-change: opacity, transform;
   }
 }
