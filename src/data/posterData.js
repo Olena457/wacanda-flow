@@ -8,24 +8,36 @@ export const galleryPoster = [
     id: 1,
     name: "Shuri",
     image: shuriHero,
+    title: "The Heart of Wakanda's ",
+    description:
+      "A visionary and a leader, Shuri embodies the spirit of innovation and resilience.",
     youtubeUrl: "https://www.youtube.com/watch?v=aNz_DD-ZUc4",
   },
   {
     id: 2,
     name: "Namor",
     image: namorHero,
+    title: "Ruler of the Deep",
+    description:
+      "The king of a hidden world, Namor represents the power of legacy and the weight of responsibility. His story reminds us that even from the depths.",
     youtubeUrl: "https://www.youtube.com/watch?v=2o4dJ3YhPoU",
   },
   {
     id: 3,
     name: "Riri",
     image: ririHero,
+    title: "Ironheart",
+    description:
+      "With an unmatched intellect and unwavering determination, Riri Williams proves that genius is not defined by age. She is a symbol of new beginnings and the power of the human mind to forge its own destiny.",
     youtubeUrl: "https://www.youtube.com/watch?v=2o4dJ3YhPoU",
   },
   {
     id: 4,
     name: "Okoe",
     image: okoeHero,
+    title: "Warrior of Honor",
+    description:
+      "As the general of the Dora Milaje, Okoye's loyalty and fierce dedication are unparalleled. She stands as a beacon of honor, showing that a true warrior fights not just with strength, but with a deep sense of duty and purpose.",
     youtubeUrl: "https://www.youtube.com/watch?v=2o4dJ3YhPoU",
   },
 ];

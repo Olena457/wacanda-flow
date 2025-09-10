@@ -1,4 +1,4 @@
-const Button = ({ text, icon, className = "", onClick, type = "button" }) => {
+const Button = ({ text, icon, className, onClick, type = "button" }) => {
   return (
     <button
       type={type}
@@ -10,7 +10,8 @@ const Button = ({ text, icon, className = "", onClick, type = "button" }) => {
         <img
           src={icon}
           alt="Icon"
-          className="relative right-0 group-hover:right-1 transition-all duration-300 w-5"
+          className="neon-button"
+          // className="relative right-0 group-hover:right-1 transition-all duration-300 w-5"
         />
       )}
     </button>
