@@ -1,8 +1,6 @@
-const Button = ({ text, icon, className, onClick, type = "button" }) => {
+const Button = ({ text, icon, className }) => {
   return (
     <button
-      type={type}
-      onClick={onClick}
       className={`flex items-center gap-2 px-5 py-3 rounded-xl text-[18px] transition-transform duration-300 hover:scale-105 ${className}`}
     >
       <span>{text}</span>

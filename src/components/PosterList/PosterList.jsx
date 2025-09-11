@@ -8,37 +8,48 @@ import arrowRight from "../../assets/icons/arrowRight.svg";
 const PosterList = () => {
   const contentRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
+
   useGSAP(() => {
+    const duration = 1.5;
+    const textEase = "power2.inOut";
+    const imageEase = "power2.inOut";
+
     gsap.fromTo("title", { opacity: 0 }, { opacity: 1, duration: 2.5 });
+
     gsap.fromTo(
       ".poster-image img",
       { opacity: 0, xPercent: -100 },
       {
         xPercent: 0,
         opacity: 1,
-        duration: 1,
-        ease: "power1.inOut",
+        duration: duration,
+        ease: imageEase,
       }
     );
+
     gsap.fromTo(
       ".poster-info h2",
       { yPercent: 100, opacity: 0 },
       {
         yPercent: 0,
-        opacity: 100,
-        ease: "power1.inOut",
+        opacity: 1,
+        duration: duration,
+        ease: textEase,
       }
     );
+
     gsap.fromTo(
       ".poster-info p",
       { yPercent: 100, opacity: 0 },
       {
         yPercent: 0,
-        opacity: 100,
-        ease: "power1.inOut",
+        opacity: 1,
+        duration: duration,
+        ease: textEase,
       }
     );
   }, [currentIndex]);
+
   const totalPosters = galleryPoster.length;
   const goToSlide = (index) => {
     const newIndex = (index + totalPosters) % totalPosters;
@@ -64,7 +75,6 @@ const PosterList = () => {
       <nav className="poster-tabs" aria-label="Artist Navigation">
         {galleryPoster.map((poster, index) => {
           const isActive = index === currentIndex;
-
           return (
             <button
               key={poster.id}
@@ -94,7 +104,6 @@ const PosterList = () => {
             <span>{prevPoster.name}</span>
             <img src={arrowLeft} alt="right-arrow" aria-hidden="true" />
           </button>
-
           <button
             className="text-left"
             onClick={() => goToSlide(currentIndex + 1)}
@@ -105,12 +114,16 @@ const PosterList = () => {
         </div>
 
         <div className="poster-image relative">
-          <img src={currentPoster.image} className="object-contain" />
+          <img
+            key={currentPoster.id}
+            src={currentPoster.image}
+            className="object-contain"
+          />
         </div>
 
         <div className="poster-info-block w-full">
           <div ref={contentRef} className="poster-info">
-            <p>Poster for:</p>
+            <h6>Poster for:</h6>
             <h3 id="title">{currentPoster.name}</h3>
           </div>
 

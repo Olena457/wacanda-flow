@@ -8,6 +8,7 @@ import QuizCard from "./components/QuizeCard/QuizeCard.jsx";
 import BallComponent from "./components/BallComponent/BallComponent.jsx";
 import DynamicParallax from "./components/DynamicParallax/DynamicParallax.jsx";
 import ParallaxComponent from "./components/ParallaxComponent/ParallaxComponent.jsx";
+import ParessImage from "./components/PressImage/PressImage.jsx";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <DynamicParallax />
       <PosterList />
       <ParallaxComponent />
+      <ParessImage />
       <div className="core-container  px-2 xl:px-10  2xl:px-16">
         <div className="shadow-container">
           <div className="shadow shadow-1"></div>

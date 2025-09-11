@@ -46,12 +46,19 @@ const HomeComponent = () => {
         />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1
-          ref={textRef}
-          className="home-text z-10 text-[#32cd32] text-5xl md:text-7xl font-bold text-center"
-        >
-          Wacanda Forever
-        </h1>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1
+            ref={textRef}
+            className="home-text z-10 text-[#32cd32] font-bold text-center flex flex-wrap justify-center items-baseline"
+          >
+            <span className="text-3xl md:text-4xl lg:text-5xl mr-2">THE</span>
+            <span className="text-5xl md:text-7xl lg:text-8xl">HALL</span>
+            <span className="text-3xl md:text-4xl lg:text-5xl mx-2">OF</span>
+            <span className="text-5xl md:text-7xl lg:text-8xl whitespace-nowrap">
+              ZERO LIMITS
+            </span>
+          </h1>
+        </div>
       </div>
     </section>
   );

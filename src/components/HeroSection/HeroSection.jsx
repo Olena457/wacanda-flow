@@ -36,12 +36,13 @@ const HeroSection = () => {
               className="absolute left-0 top-0 size-full object-cover"
             />
           </div>
-          <div className="absolute  top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 p-5">
-            <p className="w-full text-[#35ff9e] text-sm sm:text-base md:text-lg lg:text-2xl">
+
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-30 w-full px-4 sm:px-8 md:px-12 lg:px-24">
+            <h5 className="max-w-prose mx-auto text-[#35ff9e] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center leading-relaxed">
               Vakhtang remains etched in our hearts, a soul whose presence
               transcends time. His strength, wisdom, and quiet grace continue to
               guide us even in silence.
-            </p>
+            </h5>
           </div>
         </div>
       </div>

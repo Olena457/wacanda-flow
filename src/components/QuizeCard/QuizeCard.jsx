@@ -1,21 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import polygonIcon from "../../assets/icons/polygon.svg";
-
-const wisdomData = [
-  {
-    text: "You have entered the Hall of Zero Limits. Great things lie ahead for all who open themselves to finding their gift.",
-  },
-  {
-    text: "Within these walls, every step reveals a new possibility. Focus on your path and trust your inner strength to guide you.",
-  },
-  {
-    text: "The greatest treasures are often hidden in plain sight. Pay close attention, as the smallest detail can unlock the biggest secret.",
-  },
-  {
-    text: "Your journey here is unique. Embrace the unknown and allow yourself to be led by curiosity and the promise of discovery.",
-  },
-];
+import { wisdomData } from "../../data/wisdomData.js";
 
 const QuizCard = ({ onFinish }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,9 +43,7 @@ const QuizCard = ({ onFinish }) => {
       </div>
       <button onClick={handleNextFact} className="quiz-button">
         <img src={polygonIcon} alt="right-arrow" className="quiz-button-icon" />
-        <span className="quiz-button-text">
-          {isLastItem ? "Finish" : "Next"}
-        </span>
+        <span className="quiz-button-text">{isLastItem ? "End" : "Next"}</span>
       </button>
     </div>
   );
