@@ -1,62 +1,3 @@
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import { ScrollTrigger } from "gsap/all";
-
-// import homeImage from "../../assets/images/content/home-1.jpg";
-// import homeIcon from "../../assets/icons/home.svg";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const HomeComponent = () => {
-//   useGSAP(() => {
-//     const tl = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: ".home-section",
-//         start: "top top",
-//         scrub: 2.5,
-//         end: "+=200%",
-//         pin: true,
-//       },
-//     });
-
-//     tl.set(".mask-wrapper", {
-//       maskSize: "0%",
-//       maskPosition: "center",
-//     });
-
-//     tl.set(".home-text", {
-//       scale: 0.5,
-//       opacity: 0,
-//     });
-
-//     tl.to(".mask-wrapper", {
-//       maskSize: "100%",
-//       ease: "power2.out",
-//     }).to(
-//       ".home-text",
-//       {
-//         scale: 1,
-//         opacity: 1,
-//         ease: "power2.out",
-//       },
-//       "<"
-//     );
-//   });
-
-//   return (
-//     <section className="home-section">
-//       <div className="mask-wrapper">
-//         <img src={homeImage} alt="background" className="bg-image" />
-//       </div>
-
-//       <div className="home-text-wrapper">
-//         <img src={homeIcon} alt="home" className="home-text animated-title" />
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HomeComponent;
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -107,7 +48,7 @@ const HomeComponent = () => {
       <div className="absolute inset-0 flex items-center justify-center">
         <h1
           ref={textRef}
-          className="home-text z-10 text-white text-5xl md:text-7xl font-bold text-center"
+          className="home-text z-10 text-[#32cd32] text-5xl md:text-7xl font-bold text-center"
         >
           Wacanda Forever
         </h1>

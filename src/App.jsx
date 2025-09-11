@@ -7,6 +7,8 @@ import PosterList from "./components/PosterList/PosterList.jsx";
 import "./App.css";
 import QuizCard from "./components/QuizeCard/QuizeCard.jsx";
 import BallComponent from "./components/BallComponent/BallComponent.jsx";
+import DynamicParallax from "./components/DynamicParallax/DynamicParallax.jsx";
+import ParallaxComponent from "./components/ParallaxComponent/ParallaxComponent.jsx";
 
 function App() {
   const [showFinalScreen, setShowFinalScreen] = useState(false);
@@ -17,11 +19,23 @@ function App() {
 
   return (
     <main className="relative min-h-screen w-screen overflow-x-hidden">
-      <Title tag="h2" className="title" text="Wacanda Forever" />{" "}
+      <div className="center-container ">
+        {/* <div className="blob-container">
+          <div className="blob blob-1"></div>
+          <div className="blob blob-2"></div>
+        </div> */}
+        <Title tag="h2" className="masked-title" text="Wacanda Start Forever" />
+      </div>
       <HomeComponent />
       <HeroSection />
+      <DynamicParallax />
       <PosterList />
-      <div className="core-container">
+      <ParallaxComponent />
+      <div className="core-container  px-2 xl:px-10  2xl:px-16">
+        <div className="shadow-container">
+          <div className="shadow shadow-1"></div>
+          <div className="shadow shadow-2"></div>
+        </div>
         {!showFinalScreen ? (
           <>
             <BallComponent />

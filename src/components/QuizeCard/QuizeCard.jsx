@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import polygonIcon from "../../assets/icons/polygon.svg";
 
 const wisdomData = [
   {
@@ -18,7 +19,6 @@ const wisdomData = [
 
 const QuizCard = ({ onFinish }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  //   const [isCardVisible, setIsCardVisible] = useState(true);
   const cardRef = useRef(null);
   const textRef = useRef(null);
 
@@ -26,8 +26,8 @@ const QuizCard = ({ onFinish }) => {
     if (currentIndex < wisdomData.length) {
       gsap.fromTo(
         textRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
       );
     } else {
       gsap.to(cardRef.current, {
@@ -35,7 +35,6 @@ const QuizCard = ({ onFinish }) => {
         y: 50,
         duration: 1,
         onComplete: () => {
-          //   setIsCardVisible(false);
           onFinish();
         },
       });
@@ -57,10 +56,12 @@ const QuizCard = ({ onFinish }) => {
         </p>
       </div>
       <button onClick={handleNextFact} className="quiz-button">
-        {isLastItem ? "Finish" : "Next Hint"}
+        <img src={polygonIcon} alt="right-arrow" className="quiz-button-icon" />
+        <span className="quiz-button-text">
+          {isLastItem ? "Finish" : "Next"}
+        </span>
       </button>
     </div>
   );
 };
-
 export default QuizCard;

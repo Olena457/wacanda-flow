@@ -31,43 +31,42 @@
   transform: rotate(calc(var(--rot) * 20deg));
 }
 .loader .sphere.sphere1 {
-  --bg: #f008;
+  /* --bg: #f008; */
+  --bg: #00ff99;
 }
 
 .loader .sphere.sphere2 {
-  --bg: #f0f8;
-}
-
-.loader .sphere.sphere3 {
-  --bg: #ff08;
-}
-
-.loader .sphere.sphere4 {
-  --bg: #0f08;
-}
-
-.loader .sphere.sphere5 {
-  /* --bg: #0083b0; */
-  --bg: #228b22;
-}
-
-.loader .sphere.sphere6 {
-  /* --bg: #00f8; */
-  --bg: #32cd32;
-}
-
-.loader .sphere.sphere7 {
-  /* --bg: #dc1ddf88; */
+  /* --bg: #f0f8; */
   --bg: #0083b0;
 }
 
+.loader .sphere.sphere3 {
+  --bg: rgba(68, 255, 0, 0.533);
+}
+
+.loader .sphere.sphere4 {
+  --bg: #228b22;
+}
+
+.loader .sphere.sphere5 {
+  --bg: #00ff7f;
+}
+
+.loader .sphere.sphere6 {
+  --bg: #cffdfc;
+}
+
+.loader .sphere.sphere7 {
+  --bg: #018d06c0;
+}
+
 .loader .sphere.sphere8 {
-  --bg: #ffa50088;
+  --bg: #0ad9e8a5;
 }
 
 .loader .sphere.sphere9 {
   /* --bg: #e5b2ca88; */
-  --bg: #00ff99;
+  --bg: #0a700a9c;
 }
 
 .loader .item {
