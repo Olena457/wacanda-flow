@@ -1,7 +1,7 @@
-import { galleryPoster } from "../../data/posterData.js";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { galleryPoster } from "../../data/posterData.js";
 import arrowLeft from "../../assets/icons/arrowLeft.svg";
 import arrowRight from "../../assets/icons/arrowRight.svg";
 
@@ -9,7 +9,7 @@ const PosterList = () => {
   const contentRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   useGSAP(() => {
-    gsap.fromTo("title", { opacity: 0 }, { opacity: 1, duration: 1 });
+    gsap.fromTo("title", { opacity: 0 }, { opacity: 1, duration: 2.5 });
     gsap.fromTo(
       ".poster-image img",
       { opacity: 0, xPercent: -100 },
@@ -70,7 +70,7 @@ const PosterList = () => {
               key={poster.id}
               className={`poster-tabs-button ${
                 isActive
-                  ? "text-white border-white"
+                  ? "text-[#00ff7f] border-[#00ff7f]"
                   : "text-white/50 border-white/50"
               }`}
               onClick={() => goToSlide(index)}
@@ -82,6 +82,10 @@ const PosterList = () => {
       </nav>
 
       <div className="poster-content">
+        <div className="blob-container">
+          <div className="blob blob-1"></div>
+          <div className="blob blob-2"></div>
+        </div>
         <div className="arrows">
           <button
             className="text-left"
@@ -95,7 +99,7 @@ const PosterList = () => {
             className="text-left"
             onClick={() => goToSlide(currentIndex + 1)}
           >
-            <span>{nextPoster.name}</span>
+            <span className="text-[#32cd32]">{nextPoster.name}</span>
             <img src={arrowRight} alt="left-arrow" aria-hidden="true" />
           </button>
         </div>
@@ -107,10 +111,10 @@ const PosterList = () => {
         <div className="poster-info-block w-full">
           <div ref={contentRef} className="poster-info">
             <p>Poster for:</p>
-            <p id="title">{currentPoster.name}</p>
+            <h3 id="title">{currentPoster.name}</h3>
           </div>
 
-          <div className="poster-info details">
+          <div className="poster-info details min-w-[260px] max-w-[550px] mb-[50px]">
             <div className="title-and-pulse-wrapper">
               <a
                 href={currentPoster.youtubeUrl}

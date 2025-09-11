@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </div>
           <div className="absolute  top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 p-5">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg lg:text-2xl">
+            <p className="w-full text-[#35ff9e] text-sm sm:text-base md:text-lg lg:text-2xl">
               Vakhtang remains etched in our hearts, a soul whose presence
               transcends time. His strength, wisdom, and quiet grace continue to
               guide us even in silence.

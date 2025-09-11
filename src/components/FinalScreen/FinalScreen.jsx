@@ -91,8 +91,7 @@ const FinalScreen = () => {
         { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 2 }
       );
 
-      // Створення анімації для кнопки за допомогою Timeline
-      const tl = gsap.timeline(); // Без параметрів repeat та repeatDelay
+      const tl = gsap.timeline();
 
       tl.fromTo(
         buttonRef.current,
@@ -139,7 +138,7 @@ const FinalScreen = () => {
         <img src={warrior1} alt="Warrior 1" className="final-image" />
       </div>
       <div className="final-text-wrapper">
-        <p className="text-[#00ff7f]">
+        <p className="text-[#35ff9e]">
           Your journey here is unique. Embrace the unknown and allow yourself to
           be led by curiosity and the promise of discovery.
         </p>
