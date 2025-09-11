@@ -15,27 +15,35 @@ const DynamicParallax = () => {
 
   useGSAP(
     () => {
-      gsap.to(imageBoxRef.current, {
-        yPercent: -50,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 2,
-        },
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 769px)", () => {
+        gsap.to(imageBoxRef.current, {
+          yPercent: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 2,
+          },
+        });
+
+        gsap.to(contentRef.current, {
+          y: 100,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 2,
+          },
+        });
       });
 
-      gsap.to(contentRef.current, {
-        y: 100,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 2,
-        },
-      });
+      return () => {
+        mm.revert();
+      };
     },
     { scope: containerRef }
   );

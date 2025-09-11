@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import warrior1 from "../../assets/images/vertical/green.png";
 import warrior2 from "../../assets/images/vertical/indian.png";
+import arrowUp from "../../assets/icons/arrowUp.svg";
 
 const FinalScreen = () => {
   const containerRef = useRef(null);
@@ -15,7 +16,6 @@ const FinalScreen = () => {
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 2, ease: "power3.out" }
       );
-
       gsap.fromTo(
         ".final-image",
         { opacity: 0, scale: 0.9 },
@@ -27,7 +27,6 @@ const FinalScreen = () => {
           delay: 0.8,
         }
       );
-
       gsap.fromTo(
         ".final-text-wrapper p",
         { opacity: 0, y: 20 },
@@ -40,21 +39,24 @@ const FinalScreen = () => {
         buttonRef.current,
         {
           opacity: 0,
-          y: 50,
-          x: 0,
+          y: "100vh",
           borderRadius: 20,
         },
         {
           opacity: 1,
           y: 0,
-          x: 0,
-          duration: 1,
+          duration: 1.5,
           ease: "power2.out",
           delay: 2.5,
         }
       )
         .to(buttonRef.current, {
-          x: 300,
+          rotation: 360,
+          duration: 1,
+          ease: "power2.inOut",
+        })
+        .to(buttonRef.current, {
+          xPercent: 180,
           duration: 1,
           ease: "power2.inOut",
         })
@@ -63,7 +65,7 @@ const FinalScreen = () => {
           duration: 0.5,
         })
         .to(buttonRef.current, {
-          x: -200,
+          xPercent: 0,
           duration: 1,
           ease: "power2.inOut",
         });
@@ -78,23 +80,23 @@ const FinalScreen = () => {
   return (
     <div className="final-screen-container" ref={containerRef}>
       <div className="final-image-wrapper">
-        <img src={warrior1} alt="Warrior 1" className="final-image" />
+        <img src={warrior2} alt="Warrior-2" className="final-image" />
       </div>
       <div className="final-text-wrapper">
-        <p className="text-[#35ff9e]">
+        <p className="text-[#35ff9e] mb-[20px]">
           Your journey here is unique. Embrace the unknown and allow yourself to
           be led by curiosity and the promise of discovery.
         </p>
       </div>
       <div className="final-image-wrapper">
-        <img src={warrior2} alt="Warrior 2" className="final-image" />
+        <img src={warrior1} alt="Warrior-1" className="final-image" />
       </div>
       <button
         ref={buttonRef}
         onClick={handleScrollToTop}
         className="scroll-top-button"
       >
-        Top
+        <img src={arrowUp} alt="up-arrow" />
       </button>
     </div>
   );
