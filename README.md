@@ -1,12 +1,31 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🟢 Wacanda Flow
 
-Currently, two official plugins are available:
+**Wacanda Flow** is a web application that immerses users in a dynamic, animated atmosphere where every scroll becomes part of the story. Powered by the [GSAP](https://gsap.com/) animation library and its [ScrollTrigger](https://gsap.com/scrolltrigger/) plugin, we synchronize scroll behavior with smooth animations to create an engaging, interactive experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🟩 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Animated transitions between sections
+- Real-time scroll-triggered effects
+- Immersive design that responds to user interaction
+- Easy to integrate and extend
+
+---
+
+## 🟩 Technologies
+
+- **React** - for building a project
+- **GSAP** - for fluid, high-performance animations
+- **ScrollTrigger** - to link scroll position with animation timelines
+- **HTML/CSS/JavaScript** - the core of the app
+
+---
+
+## Installation
+
+```bash
+npm install
+```
