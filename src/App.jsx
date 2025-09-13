@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+
 import FinalScreen from "./components/FinalScreen/FinalScreen.jsx";
 import Title from "./components/Title/Title.jsx";
 import HomeComponent from "./components/HomeComponent/HomeComponent.jsx";
@@ -9,9 +10,11 @@ import BallComponent from "./components/BallComponent/BallComponent.jsx";
 import DynamicParallax from "./components/DynamicParallax/DynamicParallax.jsx";
 import ParallaxComponent from "./components/ParallaxComponent/ParallaxComponent.jsx";
 import ParessImage from "./components/PressImage/PressImage.jsx";
+import MovieComponent from "./components/MovieComponent/MovieComponent.jsx";
 import "./App.css";
 
 function App() {
+  const sharedVideoRef = useRef(null);
   const [showFinalScreen, setShowFinalScreen] = useState(false);
 
   const handleFinishQuiz = () => {
@@ -26,6 +29,7 @@ function App() {
       <HomeComponent />
       <HeroSection />
       <DynamicParallax />
+      <MovieComponent videoRef={sharedVideoRef} />
       <PosterList />
       <ParallaxComponent />
       <ParessImage />
