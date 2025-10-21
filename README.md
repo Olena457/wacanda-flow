@@ -20,7 +20,7 @@
 - **React** - for building a project
 - **GSAP** - for fluid, high-performance animations
 - **ScrollTrigger** - to link scroll position with animation timelines
-- **HTML/CSS/JavaScript** - the core of the app
+- **HTML/CSS/JavaScript/React** - the core of the app
 
 ---
 
