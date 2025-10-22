@@ -6,16 +6,17 @@
 
 ---
 
-## 🟩 Features
+## 🟢Features
 
 - Animated transitions between sections
 - Real-time scroll-triggered effects
 - Immersive design that responds to user interaction
+- Fully responsive layout across devices, including tablets
+- All animations supported from tablet view upwards
 - Easy to integrate and extend
-
 ---
 
-## 🟩 Technologies
+## 🟢Technologies
 
 - **React** - for building a project
 - **GSAP** - for fluid, high-performance animations
