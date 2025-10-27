@@ -10,9 +10,11 @@
 
 - Animated transitions between sections
 - Real-time scroll-triggered effects
+- Distortion and deformation effects
 - Immersive design that responds to user interaction
 - Fully responsive layout across devices, including tablets
 - All animations supported from tablet view upwards
+- The video container dynamically scales up or down.
 - Easy to integrate and extend
 ---
 
